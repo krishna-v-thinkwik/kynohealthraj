@@ -3,7 +3,15 @@ import google.generativeai as genai
 from playwright.sync_api import sync_playwright
 import sys
 import asyncio
- 
+import subprocess
+import sys
+
+# Run playwright install only once
+try:
+    subprocess.run(["playwright", "install", "chromium"], check=True)
+except Exception as e:
+    print("Failed to install playwright browsers:", e)
+
 if sys.platform.startswith('win'):
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
  
