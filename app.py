@@ -23,14 +23,6 @@ model = genai.GenerativeModel('gemini-2.0-flash')
 def scrape_kynohealth():
     urls = [
         "https://www.kynohealth.com/",
-        "https://www.kynohealth.com/provide-services",
-        "https://www.kynohealth.com/about-us",
-        "https://www.kynohealth.com/blog",
-        "https://www.kynohealth.com/contact-us",
-        "https://www.kynohealth.com/book-doctor/step-1",
-        "https://www.kynohealth.com/terms-conditions",
-        "https://www.kynohealth.com/return-policy",
-        "https://www.kynohealth.com/return-policy",
     ]
  
     all_text = ""
